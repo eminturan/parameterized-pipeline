@@ -1,16 +1,13 @@
 parameters:
-- name: myString
-  type: string
-  default: 'default value!'
-- name: mynum
-  displayName: 'My Number Param'
+- name: imageTag
+  displayName: 'Image Tag Giriniz'
   type: number
-  default: 123
+  default: 2.4.0
 
 pool:
   name: LocalPoolEmin
 
 steps:
-- script: echo ${{ parameters.myString }} was entered at runtime!
-- ${{ if not(eq(parameters.mynum, 123)) }}:
-  - script: echo You overrode the default number to ${{ parameters.mynum }}
+- script: echo "Image Tag: " ${{ parameters.imageTag }}
+- ${{ if eq(length(parameters.imageTag), 0) }}:
+  - script: "Lütfen image tag i giriniz..."
