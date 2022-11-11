@@ -1,7 +1,7 @@
 parameters:
 - name: imageTag
   displayName: 'Image Tag Giriniz:'
-  type: number
+  type: string
   default: 2.4.0
 
 pool:
