@@ -4,6 +4,8 @@ parameters:
   type: string
   default: 2.4.0
 
+trigger: none
+
 pool:
   name: LocalPoolEmin
 
