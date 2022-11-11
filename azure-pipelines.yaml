@@ -8,7 +8,7 @@ parameters:
   default: 123
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: LocalPoolEmin
 
 steps:
 - script: echo ${{ parameters.myString }} was entered at runtime!
