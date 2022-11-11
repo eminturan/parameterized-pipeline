@@ -1,14 +1,14 @@
 parameters:
 - name: imageTag
   displayName: 'Image Tag Giriniz:'
-  type: string
+  type: number
   default: 2.4.0
 
 pool:
   name: LocalPoolEmin
 
 steps:
-- script: echo "Image Tag: " ${{ parameters.imageTag }}
+- script: echo Image Tag: ${{ parameters.imageTag }}
 
 - ${{ if eq(length(parameters.imageTag), 0) }}:
   - script: "Lütfen image tag i giriniz..."
